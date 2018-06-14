@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Интернет-магазин гаджетов "Девайс"</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner-page">
 <header class="main-header">
-    <a class="logo" href="index.html">
-        <img src="img/logo.png" width="163" height="36"
-             alt="Логотип интернет-магазина гаджетов Device">
-    </a>
+    <a class="logo button" href="index.html">Device</a>
     <nav class="navigation">
         <ul class="navigation-user-list">
             <li class="navigation-user-item search">
@@ -41,7 +40,8 @@
         </ul>
         <ul class="navigation-site-list">
             <li class="navigation-site-item catalog navigation-site-item_current">
-                <h2><a href="catalog.html">Каталог товаров</a></h2>
+                <h2 class="visually-hidden">Каталог товаров</h2>
+                <a href="catalog.html">Каталог товаров</a>
                 <a href="#"><img src="img/plus.svg" width="16" height="16" alt="Открыть меню Kаталог товаров"></a>
                 <ul class="catalog-menu-list visually-hidden">
                     <li class="catalog-menu-item"><a href="catalog.html">Виртуальная реальность</a></li>
@@ -86,17 +86,17 @@
         <form class="sorting-form">
             <ul class="sorting-form-list">
                 <li class="sorting-form-item sorting-form-item_current">
-                    <button type="button" class="sorting-form-button">По цене</button>
+                    <a href="sort.html" class="sorting-form-button button">По цене</a>
                 </li>
                 <li class="sorting-form-item">
-                    <button type="button" class="sorting-form-button">По типу</button>
+                    <a href="sort.html" class="sorting-form-button button">По типу</a>>
                 </li>
                 <li class="sorting-form-item">
-                    <button type="button" class="sorting-form-button">По популярности</button>
+                    <a href="sort.html" class="sorting-form-button button">По популярности</a>>
                 </li>
             </ul>
-            <button type="submit" name="sorting-up" class="sorting-form-button-up"></button>
-            <button type="submit" name="sorting-down" class="sorting-form-button-down"></button>
+            <a href="sort.html" class="sorting-form-button-up button"></a>
+            <a href="sort.html" class="sorting-form-button-down button"></a>
         </form>
     </section>
     <section class="filters">
@@ -232,8 +232,7 @@
     </section>
 </main>
 <footer class="main-footer">
-    <img src="img/logo.png" width="163" height="36"
-         alt="Логотип интернет-магазина гаджетов Device">
+    <p class="main-footer-logo">Device</p>
     <ul class="navigation-user-list">
         <li class="navigation-user-item login">
             <a href="index.html">
