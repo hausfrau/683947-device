@@ -7,12 +7,12 @@
     var searchButton = searchForm.querySelector('.search__button');
     var searchLabel = searchForm.querySelector('.search__label');
     var navigationSiteList = document.querySelector('.navigation-site-list');
-    var openCatalog = navigationSiteList.querySelector('.open-catalog');
-    var catalogMenuList = navigationSiteList.querySelector('.catalog-menu-list');
+    /*var openCatalog = navigationSiteList.querySelector('.open-catalog');
+    var catalogMenuList = navigationSiteList.querySelector('.catalog-menu-list');*/
     var services = document.querySelector('.services');
-    var appearanceButtonDelivery = services.querySelector('.appearance-button__delivery');
-    var appearanceButtonWarranty = services.querySelector('.appearance-button__warranty');
-    var appearanceButtonCredit = services.querySelector('.appearance-button__credit');
+    var gradientButtonDelivery = services.querySelector('.gradient-button__delivery');
+    var gradientButtonWarranty = services.querySelector('.gradient-button__warranty');
+    var gradientButtonCredit = services.querySelector('.gradient-button__credit');
     var servicesDescriptionList = services.querySelector('.services-description-list');
     var servicesDescriptionDelivery = servicesDescriptionList.querySelector('.services-description__delivery');
     var servicesDescriptionWarranty = servicesDescriptionList.querySelector('.services-description__warranty');
@@ -41,6 +41,7 @@
     var goproHover = manufacturersList.querySelector('.gopro-hover');
     var vive = manufacturersList.querySelector('.vive');
     var viveHover = manufacturersList.querySelector('.vive-hover');
+    //var counter = window.getComputedStyle(document.querySelector('.promo-item h3'), ':after');
 
     var changeImage = function (firstImage, secondImage) {
         firstImage.classList.add(VISUALLY_HIDDEN);
@@ -91,12 +92,12 @@
     vive.addEventListener('mouseover', onViveMouseover);
     viveHover.addEventListener('mouseout', onViveHoverMouseout);
 
-    var onOpenCatalogClick = function () {
+    /*var onOpenCatalogClick = function () {
         var classList = catalogMenuList.classList;
         classList.contains(VISUALLY_HIDDEN) ? classList.remove(VISUALLY_HIDDEN) : classList.add(VISUALLY_HIDDEN);
     };
 
-    openCatalog.addEventListener('click', onOpenCatalogClick);
+    openCatalog.addEventListener('click', onOpenCatalogClick);*/
 
     var onSearchInput = function () {
         searchLabel.classList.add('search__label_border');
@@ -112,9 +113,9 @@
         });
     };
 
-    var onAppearanceButtonDeliveryClick = function () {
+    var onGradientButtonDeliveryClick = function () {
         removeClassFromElements(services, 'services-item_current');
-        appearanceButtonDelivery.classList.add('services-item_current');
+        gradientButtonDelivery.classList.add('services-item_current');
         removeClassFromElements(servicesDescriptionList, 'services-description-item_current');
         servicesDescriptionDelivery.classList.add('services-description-item_current');
         servicesDescriptionDelivery.classList.remove(VISUALLY_HIDDEN);
@@ -122,11 +123,11 @@
         servicesDescriptionCredit.classList.add(VISUALLY_HIDDEN);
     };
 
-    appearanceButtonDelivery.addEventListener('click', onAppearanceButtonDeliveryClick);
+    gradientButtonDelivery.addEventListener('click', onGradientButtonDeliveryClick);
 
-    var onAppearanceButtonWarrantyClick = function () {
+    var onGradientButtonWarrantyClick = function () {
         removeClassFromElements(services, 'services-item_current');
-        appearanceButtonWarranty.classList.add('services-item_current');
+        gradientButtonWarranty.classList.add('services-item_current');
         removeClassFromElements(servicesDescriptionList, 'services-description-item_current');
         servicesDescriptionWarranty.classList.add('services-description-item_current');
         servicesDescriptionWarranty.classList.remove(VISUALLY_HIDDEN);
@@ -134,11 +135,11 @@
         servicesDescriptionCredit.classList.add(VISUALLY_HIDDEN);
     };
 
-    appearanceButtonWarranty.addEventListener('click', onAppearanceButtonWarrantyClick);
+    gradientButtonWarranty.addEventListener('click', onGradientButtonWarrantyClick);
 
-    var onAppearanceButtonCreditClick = function () {
+    var onGradientButtonCreditClick = function () {
         removeClassFromElements(services, 'services-item_current');
-        appearanceButtonCredit.classList.add('services-item_current');
+        gradientButtonCredit.classList.add('services-item_current');
         removeClassFromElements(servicesDescriptionList, 'services-description-item_current');
         servicesDescriptionCredit.classList.add('services-description-item_current');
         servicesDescriptionCredit.classList.remove(VISUALLY_HIDDEN);
@@ -146,7 +147,7 @@
         servicesDescriptionWarranty.classList.add(VISUALLY_HIDDEN);
     };
 
-    appearanceButtonCredit.addEventListener('click', onAppearanceButtonCreditClick);
+    gradientButtonCredit.addEventListener('click', onGradientButtonCreditClick);
 
     var onWriteUsOpenClick = function () {
         modalWriteUs.classList.remove(VISUALLY_HIDDEN);
@@ -178,6 +179,9 @@
         firstSlide.classList.remove(VISUALLY_HIDDEN);
         secondSlide.classList.add(VISUALLY_HIDDEN);
         thirdSlide.classList.add(VISUALLY_HIDDEN);
+        // console.log(counter.getProperty('content'));
+        // counter.setProperty('content', '01');
+
     };
 
     firstSlideLink.addEventListener('click', onFirstSlideLinkClick);
@@ -188,6 +192,10 @@
         secondSlide.classList.remove(VISUALLY_HIDDEN);
         firstSlide.classList.add(VISUALLY_HIDDEN);
         thirdSlide.classList.add(VISUALLY_HIDDEN);
+        //  counter.innerHTML = '<b>02</b>';
+        //window.getComputedStyle(document.querySelector('.promo-item h3'), ':after').content = '02';
+        //console.log(counter.setProperty('content', '02'));
+        // counter.setProperty('content', '02');
     };
 
     secondSlideLink.addEventListener('click', onSecondSlideLinkClick);
@@ -198,6 +206,8 @@
         thirdSlide.classList.remove(VISUALLY_HIDDEN);
         secondSlide.classList.add(VISUALLY_HIDDEN);
         firstSlide.classList.add(VISUALLY_HIDDEN);
+        //      console.log(counter.getProperty('content'));
+        //   counter.setProperty('content', '03');
     };
 
     thirdSlideLink.addEventListener('click', onThirdSlideLinkClick);
