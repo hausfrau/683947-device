@@ -24,7 +24,8 @@
             </li>
             <li class="navigation-user-item login">
                 <a href="profile.html" class="link-button">
-                    <img src="img/user.svg" width="13" height="12" alt="Войти" class="user-image icon">
+                    <img src="img/user.svg" width="13" height="12" alt="Личный кабинет" class="user-image icon">
+                    <span class="user-name visually-hidden">Валентин Петухов</span>
                     <span class="user-name">Войти</span>
                 </a>
             </li>
@@ -100,19 +101,33 @@
                                 длиной и весом всего 5 килограмм.</p>
                             <div class="more"><a href="details.html" class="gradient-button">Подробнее</a></div>
                             <table class="promo-item-characteristics">
-                                <tbody>
-                                <tr class="table-headers">
-                                    <th>Длина палки</th>
-                                    <th>Вес палки</th>
-                                    <th>Материал</th>
-                                </tr>
                                 <tr class="table-data">
                                     <td>8,5 м</td>
                                     <td>5 кг</td>
                                     <td>Карбон</td>
                                 </tr>
-                                </tbody>
+                                <tr class="table-headers">
+                                    <td>Длина палки</td>
+                                    <td>Вес палки</td>
+                                    <td>Материал</td>
+                                </tr>
+
+
                             </table>
+                           <!-- <div  class="promo-item-character">
+                            <dl>
+                                <dd class="table-data">8,5 м</dd>
+                                <dt class="table-headers">Длина палки</dt>
+                            </dl>
+                            <dl>
+                                <dd class="table-data">5 кг</dd>
+                                <dt class="table-headers">Вес палки</dt>
+                            </dl>
+                            <dl>
+                                <dd class="table-data">Карбон</dd>
+                                <dt class="table-headers">Материал</dt>
+                            </dl>
+                            </div>-->
                         </div>
                     </div>
                 </li>
@@ -125,22 +140,24 @@
                             </a>
                         </figure>
                         <div class="promo-item-description-wrapper">
-                            <h3>Худеем правильно
+                            <h3>Худеем<br>правильно!
                                 <span class="counter" data-value="02"></span>
                             </h3>
                             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
                                 диету.</p>
                             <div class="more"><a href="details.html" class="gradient-button">Подробнее</a></div>
                             <table class="promo-item-characteristics">
-                                <tbody>
-                                <tr class="table-headers">
-                                    <th>Без подзарядки</th>
-                                </tr>
                                 <tr class="table-data">
                                     <td>48 часов</td>
                                 </tr>
-                                </tbody>
+                                <tr class="table-headers">
+                                    <td>Без подзарядки</td>
+                                </tr>
                             </table>
+                            <!--<dl class="promo-item-characteristics">
+                                <dd class="table-data">48 часов</dd>
+                                <dt class="table-headers">Без подзарядки</dt>
+                            </dl>-->
                         </div>
                     </div>
                 </li>
@@ -160,17 +177,22 @@
                                 стандартную камеру.</p>
                             <div class="more"><a href="details.html" class="gradient-button">Подробнее</a></div>
                             <table class="promo-item-characteristics">
-                                <tbody>
-                                <tr class="table-headers">
-                                    <th>Дальность полета</th>
-                                    <th>Радиус поражения</th>
-                                </tr>
                                 <tr class="table-data">
                                     <td>800 м</td>
                                     <td>50 м</td>
                                 </tr>
-                                </tbody>
+                                <tr class="table-headers">
+                                    <td>Дальность полета</td>
+                                    <td>Радиус поражения</td>
+                                </tr>
                             </table>
+                            <!--<dl class="promo-item-characteristics">
+                                <dd class="table-data">800 м</dd>
+                                <dt class="table-headers">Дальность полета</dt>
+                                <dd class="table-data">50 м</dd>
+                                <dt class="table-headers">Радиус поражения</dt>
+                            </dl>-->
+
                         </div>
                     </div>
                 </li>
@@ -185,7 +207,7 @@
                     <p class="products-item__imgWrapper">
                         <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
                     </p>
-                    <h3>Виртуальная<br>реальность</h3>
+                    <h3>Виртуальная реальность</h3>
                 </a>
             </li>
             <li class="products-item">
@@ -289,35 +311,36 @@
         <h2 class="visually-hidden">Производители</h2>
         <ul class="manufacturers-list">
             <li class="manufacturers-item">
-                <a href="https://www.dji.com" class="dji"><img src="img/logo-1-repose.png" width="260" height="100"
-                                                               alt="DJI" class="manufacturers-item__image"></a>
-                <a href="https://www.dji.com" class="dji-hover visually-hidden"><img src="img/logo-1-hover.png"
-                                                                                     width="260" height="100" alt="DJI"
-                                                                                     class="manufacturers-item__image opacity-1"></a>
+                <a href="https://www.dji.com" class="manufacturers_link">
+                    <img src="img/logo-1-repose.png" width="260" height="100" alt="DJI"
+                         class="manufacturers-item__image">
+                    <img src="img/logo-1-hover.png" width="260" height="100" alt="DJI"
+                         class="manufacturers-item__image-hover">
+                </a>
             </li>
             <li class="manufacturers-item">
-                <a href="http://www.sp-gadgets.com" class="spgadgets"><img src="img/logo-2-repose.png" width="260"
-                                                                           height="100" alt="SP Gadgets"
-                                                                           class="manufacturers-item__image"></a>
-                <a href="http://www.sp-gadgets.com" class="spgadgets-hover visually-hidden"><img
-                    src="img/logo-2-hover.png" width="260" height="100" alt="SP Gadgets"
-                    class="manufacturers-item__image opacity-1"></a>
+                <a href="http://www.sp-gadgets.com" class="manufacturers_link">
+                    <img src="img/logo-2-repose.png" width="260" height="100" alt="SP Gadgets"
+                         class="manufacturers-item__image">
+                    <img src="img/logo-2-hover.png" width="260" height="100" alt="SP Gadgets"
+                         class="manufacturers-item__image-hover">
+                </a>
             </li>
             <li class="manufacturers-item">
-                <a href="https://gopro.com" class="gopro"><img src="img/logo-3-repose.png" width="260" height="100"
-                                                               alt="GoPro" class="manufacturers-item__image"></a>
-                <a href="https://gopro.com" class="gopro-hover visually-hidden"><img src="img/logo-3-hover.png"
-                                                                                     width="260" height="100"
-                                                                                     alt="GoPro"
-                                                                                     class="manufacturers-item__image opacity-1"></a>
+                <a href="https://gopro.com" class="manufacturers_link">
+                    <img src="img/logo-3-repose.png" width="260" height="100" alt="GoPro"
+                         class="manufacturers-item__image">
+                    <img src="img/logo-3-hover.png" width="260" height="100" alt="GoPro"
+                         class="manufacturers-item__image-hover">
+                </a>
             </li>
             <li class="manufacturers-item">
-                <a href="https://www.vive.com" class="vive"><img src="img/logo-4-repose.png" width="260" height="100"
-                                                                 alt="VIVE" class="manufacturers-item__image"></a>
-                <a href="https://www.vive.com" class="vive-hover visually-hidden"><img src="img/logo-4-hover.png"
-                                                                                       width="260" height="100"
-                                                                                       alt="VIVE"
-                                                                                       class="manufacturers-item__image opacity-1"></a>
+                <a href="https://www.vive.com" class="manufacturers_link">
+                    <img src="img/logo-4-repose.png" width="260" height="100" alt="VIVE"
+                         class="manufacturers-item__image">
+                    <img src="img/logo-4-hover.png" width="260" height="100" alt="VIVE"
+                         class="manufacturers-item__image-hover">
+                </a>
             </li>
         </ul>
     </section>
@@ -325,9 +348,9 @@
         <section class="about">
             <div class="line"></div>
             <h2>О нас</h2>
-            <p>Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
+            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <section class="about-partners">
-                <h3>Мы можем доставить ваш товар в самые отдаленные точки<br>России! DEVICE работает со многими
+                <h3>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
                     транспортными
                     компаниями</h3>
                 <ul class="about-partners-list">
@@ -362,7 +385,8 @@
         <ul class="navigation-user-list">
             <li class="navigation-user-item login">
                 <a href="profile.html" class="link-button">
-                    <img src="img/user-footer.svg" width="13" height="12" alt="Войти" class="user-image icon">
+                    <img src="img/user-footer.svg" width="13" height="12" alt="Личный кабинет" class="user-image icon">
+                    <span class="user-name visually-hidden">Валентин Петухов</span>
                     <span class="user-name">Войти</span>
                 </a>
             </li>
@@ -381,7 +405,7 @@
         </ul>
     </div>
     <div class="footer-second-row">
-        <p class="contacts-address">г.Москва, ул. Строителей, 15</p>
+        <p class="contacts-address">г. Москва, ул. Строителей, 15</p>
         <ul class="navigation-site-list">
             <li class="navigation-site-item">
                 <a href="delivery.html" class="button">Доставка</a>
@@ -393,7 +417,7 @@
                 <a href="contacts.html" class="button">Контакты</a>
             </li>
         </ul>
-        <p class="contacts-phone">Тел:+7(495)495-95-95</p>
+        <p class="contacts-phone">Тел: +7(495)495-95-95</p>
     </div>
     <div class="footer-third-row">
         <div class="line"></div>
@@ -427,6 +451,9 @@
 </footer>
 <section class="modal-map modal visually-hidden">
     <h2 class="visually-hidden">Карта проезда</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947342!2d37.527429315756606!3d55.687034004530254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa+Stroiteley%2C+15%2C+Moskva%2C+119311!5e0!3m2!1sen!2sru!4v1530529396579"
+        width="960" height="559" style="border:0" allowfullscreen></iframe>
     <p>
         <img class="big_map" src="img/map-big.jpg" width="960" height="559"
              alt="Офис компании по адресу г.Москва, ул. Строителей, 15">
@@ -443,17 +470,17 @@
         <div class="write-us-item">
             <label for="write-us-name" class="write-us-item__label">Ваше имя:</label>
             <input id="write-us-name" class="write-us-item__input" type="text" name="name" value=""
-                   placeholder="Имя Фамилия">
+                   placeholder="Имя Фамилия" required>
         </div>
         <div class="write-us-item">
             <label for="write-us-email" class="write-us-item__label">Ваш e-mail</label>
             <input id="write-us-email" class="write-us-item__input" name="email" value=""
-                   placeholder="email@example.com">
+                   placeholder="email@example.com" required>
         </div>
-        <div class="write-us-item">
+        <div class="write-us-item write-us-item__textarea">
             <label for="write-us-text" class="write-us-item__label">Текст письма:</label>
-            <textarea id="write-us-text" class="write-us-item__textarea" name="text"
-                      placeholder="В свободной форме"></textarea>
+            <textarea id="write-us-text" name="text"
+                      placeholder="В свободной форме" required></textarea>
         </div>
         <button class="gradient-button submit" type="submit">Отправить</button>
         <label>

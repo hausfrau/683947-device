@@ -6,9 +6,6 @@
     var searchInput = searchForm.querySelector('.search__input');
     var searchButton = searchForm.querySelector('.search__button');
     var searchLabel = searchForm.querySelector('.search__label');
-    var navigationSiteList = document.querySelector('.navigation-site-list');
-    /*var openCatalog = navigationSiteList.querySelector('.open-catalog');
-    var catalogMenuList = navigationSiteList.querySelector('.catalog-menu-list');*/
     var services = document.querySelector('.services');
     var gradientButtonDelivery = services.querySelector('.gradient-button__delivery');
     var gradientButtonWarranty = services.querySelector('.gradient-button__warranty');
@@ -32,72 +29,19 @@
     var firstSlide = promoList.querySelector('.first-slide');
     var secondSlide = promoList.querySelector('.second-slide');
     var thirdSlide = promoList.querySelector('.third-slide');
-    var manufacturersList = document.querySelector('.manufacturers-list');
-    var dji = manufacturersList.querySelector('.dji');
-    var djiHover = manufacturersList.querySelector('.dji-hover');
-    var spgadgets = manufacturersList.querySelector('.spgadgets');
-    var spgadgetsHover = manufacturersList.querySelector('.spgadgets-hover');
-    var gopro = manufacturersList.querySelector('.gopro');
-    var goproHover = manufacturersList.querySelector('.gopro-hover');
-    var vive = manufacturersList.querySelector('.vive');
-    var viveHover = manufacturersList.querySelector('.vive-hover');
-    //var counter = window.getComputedStyle(document.querySelector('.promo-item h3'), ':after');
+    var writeUsForm = document.querySelector('.write-us-form');
+    var writeUsName = writeUsForm.querySelector('#write-us-name');
+    var writeUsEmail = writeUsForm.querySelector('#write-us-email');
+    var writeUsText = writeUsForm.querySelector('.write-us-text');
+    var submit = writeUsForm.querySelector('.submit');
+    var userName = '';
+    var userEmail = '';
+    var isStorageSupport = false;
 
-    var changeImage = function (firstImage, secondImage) {
-        firstImage.classList.add(VISUALLY_HIDDEN);
-        secondImage.classList.remove(VISUALLY_HIDDEN);
+    var hideSearchButton = function () {
+        searchLabel.classList.remove('search__label_border');
+        searchButton.classList.add(VISUALLY_HIDDEN);
     };
-
-    var onDjiMouseover = function () {
-        changeImage(dji, djiHover);
-    };
-
-    var onDjiHoverMouseout = function () {
-        changeImage(djiHover, dji);
-    };
-
-    dji.addEventListener('mouseover', onDjiMouseover);
-    djiHover.addEventListener('mouseout', onDjiHoverMouseout);
-
-    var onSpgadgetsMouseover = function () {
-        changeImage(spgadgets, spgadgetsHover);
-    };
-
-    var onSpgadgetsHoverMouseout = function () {
-        changeImage(spgadgetsHover, spgadgets);
-    };
-
-    spgadgets.addEventListener('mouseover', onSpgadgetsMouseover);
-    spgadgetsHover.addEventListener('mouseout', onSpgadgetsHoverMouseout);
-
-    var onGoproMouseover = function () {
-        changeImage(gopro, goproHover);
-    };
-
-    var onGoproHoverMouseout = function () {
-        changeImage(goproHover, gopro);
-    };
-
-    gopro.addEventListener('mouseover', onGoproMouseover);
-    goproHover.addEventListener('mouseout', onGoproHoverMouseout);
-
-    var onViveMouseover = function () {
-        changeImage(vive, viveHover);
-    };
-
-    var onViveHoverMouseout = function () {
-        changeImage(viveHover, vive);
-    };
-
-    vive.addEventListener('mouseover', onViveMouseover);
-    viveHover.addEventListener('mouseout', onViveHoverMouseout);
-
-    /*var onOpenCatalogClick = function () {
-        var classList = catalogMenuList.classList;
-        classList.contains(VISUALLY_HIDDEN) ? classList.remove(VISUALLY_HIDDEN) : classList.add(VISUALLY_HIDDEN);
-    };
-
-    openCatalog.addEventListener('click', onOpenCatalogClick);*/
 
     var onSearchInput = function () {
         searchLabel.classList.add('search__label_border');
@@ -149,8 +93,21 @@
 
     gradientButtonCredit.addEventListener('click', onGradientButtonCreditClick);
 
-    var onWriteUsOpenClick = function () {
+    var onWriteUsOpenClick = function (evt) {
+        evt.preventDefault();
         modalWriteUs.classList.remove(VISUALLY_HIDDEN);
+
+        if (userName) {
+            writeUsName.value = userName;
+            if (userEmail) {
+                writeUsEmail.value = userEmail;
+                writeUsText.focus();
+            } else {
+                writeUsEmail.focus();
+            }
+        } else {
+            writeUsName.focus();
+        }
     };
 
     writeUsOpen.addEventListener('click', onWriteUsOpenClick);
@@ -161,7 +118,8 @@
 
     writeUsClose.addEventListener('click', onWriteUsCloseClick);
 
-    var onMapOpenClick = function () {
+    var onMapOpenClick = function (evt) {
+        evt.preventDefault();
         modalMap.classList.remove(VISUALLY_HIDDEN);
     };
 
@@ -179,9 +137,6 @@
         firstSlide.classList.remove(VISUALLY_HIDDEN);
         secondSlide.classList.add(VISUALLY_HIDDEN);
         thirdSlide.classList.add(VISUALLY_HIDDEN);
-        // console.log(counter.getProperty('content'));
-        // counter.setProperty('content', '01');
-
     };
 
     firstSlideLink.addEventListener('click', onFirstSlideLinkClick);
@@ -192,10 +147,6 @@
         secondSlide.classList.remove(VISUALLY_HIDDEN);
         firstSlide.classList.add(VISUALLY_HIDDEN);
         thirdSlide.classList.add(VISUALLY_HIDDEN);
-        //  counter.innerHTML = '<b>02</b>';
-        //window.getComputedStyle(document.querySelector('.promo-item h3'), ':after').content = '02';
-        //console.log(counter.setProperty('content', '02'));
-        // counter.setProperty('content', '02');
     };
 
     secondSlideLink.addEventListener('click', onSecondSlideLinkClick);
@@ -206,15 +157,34 @@
         thirdSlide.classList.remove(VISUALLY_HIDDEN);
         secondSlide.classList.add(VISUALLY_HIDDEN);
         firstSlide.classList.add(VISUALLY_HIDDEN);
-        //      console.log(counter.getProperty('content'));
-        //   counter.setProperty('content', '03');
     };
 
     thirdSlideLink.addEventListener('click', onThirdSlideLinkClick);
 
     var setup = function () {
         searchInput.value = "";
+        hideSearchButton();
+
+        if (typeof(Storage) !== 'undefined') {
+            isStorageSupport = true;
+            userName = localStorage.getItem('userName');
+            userEmail = localStorage.getItem('userEmail');
+        }
+
+
     };
+
+    writeUsForm.addEventListener("submit", function (evt) {
+        if (!writeUsName.value || !writeUsEmail.value || !writeUsText.value) {
+            evt.preventDefault();
+            console.log("Нужно ввести имя и электронную почту");
+        } else {
+            if (isStorageSupport) {
+                localStorage.setItem('userName', writeUsName.value);
+                localStorage.setItem('userEmail', writeUsEmail.value);
+            }
+        }
+    });
 
     setup();
 })();
