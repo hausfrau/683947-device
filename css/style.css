@@ -1963,8 +1963,7 @@ body {
     line-height: 36px;
 }
 
-.catalog-link:hover .catalog-menu-list,
-.catalog-link:focus-within .catalog-menu-list {
+.catalog-link:hover .catalog-menu-list {
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
