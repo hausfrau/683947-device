@@ -128,9 +128,15 @@ input[type="radio"].visually-hidden {
 }
 
 .gradient-button {
-    display: table-cell;
+    /*display: block;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: middle;*/
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    justify-content: center;
     width: 220px;
     height: 40px;
     margin: 0;
@@ -188,7 +194,10 @@ input[type="radio"].visually-hidden {
 .search__form {
     margin: 0;
     height: 49px;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     padding: 0;
     padding-left: 6px;
     padding-top: 3px;
@@ -220,10 +229,13 @@ input[type="radio"].visually-hidden {
 }
 
 .search__label {
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0;
     padding: 0;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     box-sizing: border-box;
     align-items: center;
     outline: none;
@@ -361,6 +373,7 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/slider-button-empty1.svg");
     background-repeat: no-repeat;
     display: inline-block;
+    vertical-align: middle;
     background-size: 100%;
     width: 12px;
     height: 12px;
@@ -532,7 +545,10 @@ tbody {
 
 .promo-item-character {
     width: 480px;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 0;
@@ -591,7 +607,10 @@ tbody {
 }
 
 .products-item__imgWrapper {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     align-items: center;
     justify-content: center;
     width: 160px;
@@ -776,6 +795,7 @@ p.products-item__imgWrapper:hover {
 .map__link {
     margin-bottom: 63px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .gradient-button.more-about {
@@ -884,7 +904,10 @@ p.products-item__imgWrapper:hover {
 }
 
 .write-us-form {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -1013,6 +1036,7 @@ p.products-item__imgWrapper:hover {
 
 .breadcrumbs-item {
     display: inline-block;
+    vertical-align: top;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0;
@@ -1068,7 +1092,10 @@ p.products-item__imgWrapper:hover {
     /*position: relative;
     z-index: 1;*/
     width: 200px;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1103,7 +1130,10 @@ p.products-item__imgWrapper:hover {
 }
 
 .filters__title {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     box-sizing: border-box;
     justify-content: flex-start;
     align-items: center;
@@ -1193,7 +1223,10 @@ p.products-item__imgWrapper:hover {
 
 .price-controls {
     font-size: 0;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: flex-start;
     margin: 0;
     padding: 0;
@@ -1203,6 +1236,7 @@ p.products-item__imgWrapper:hover {
 
 .price-controls label {
     display: inline-block;
+    vertical-align: top;
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -1392,7 +1426,10 @@ label.max-price {
     margin: 0;
     padding: 0;
     /*background-color: #ebebeb;*/
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: flex-start;
     align-items: center;
 }
@@ -1414,6 +1451,7 @@ label.max-price {
 
 .sorting-form-item {
     display: inline-block;
+    vertical-align: top;
 }
 
 .price-sort {
@@ -1452,12 +1490,18 @@ label.max-price {
 }
 
 .sorting-form-button-up {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     align-items: center;
 }
 
 .sorting-form-button-down {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     align-items: center;
     margin-left: 19px;
     /*padding-right: 140px;*/
@@ -1493,7 +1537,10 @@ label.max-price {
 
 .catalog-list {
     list-style: none;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-wrap: wrap;
     align-items: stretch;
     list-style: none;
@@ -1518,7 +1565,10 @@ label.max-price {
 .new::after {
     content: "new";
     position: absolute;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
     align-items: center;
     top: 27px;
@@ -1568,7 +1618,10 @@ label.max-price {
 }
 
 .catalog-item h3 {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     align-items: baseline;
     margin: 0;
@@ -1642,13 +1695,19 @@ label.max-price {
     padding: 0;
     /*margin-left: 74px;*/
     background-color: #ebebeb;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
 }
 
 .pagination-list {
     list-style: none;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     align-items: center;
     margin: 0;
@@ -1686,6 +1745,7 @@ label.max-price {
 
 .catalog-button {
     display: inline-block;
+    vertical-align: middle;
     text-align: center;
     width: 126px;
     height: 70px;
@@ -1728,7 +1788,10 @@ label.max-price {
     background-color: rgba(238, 238, 238, 0);
     top: 0;
     left: 0;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1778,7 +1841,10 @@ body {
 }
 
 .navigation {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-direction: column;
     align-items: center;
     background-color: transparent;
@@ -1794,7 +1860,10 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-wrap: nowrap;
     list-style: none;
     margin-bottom: 29px;
@@ -1827,7 +1896,10 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     width: 100%;
     justify-content: space-between;
 }
@@ -1874,6 +1946,7 @@ body {
     display: none;
     flex-wrap: wrap;
     align-content: flex-start;
+    align-items: flex-start;
     justify-content: flex-start;
     min-height: 148px;
     width: 623px;
@@ -1881,7 +1954,7 @@ body {
     padding-left: 57px;
     padding-right: 480px;
     background-color: #f7e296;
-    z-index: 1;
+    z-index: 2;
 }
 
 .catalog-menu-item a {
@@ -1892,7 +1965,10 @@ body {
 
 .catalog-link:hover .catalog-menu-list,
 .catalog-link:focus-within .catalog-menu-list {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 }
 
 .promo {
@@ -1913,7 +1989,7 @@ body {
     position: absolute;
     /*top: 65%;
     right: 7%;*/
-    top: 321px;
+    top: 319px;
     right: 81px;
     margin: 0;
     padding: 0;
@@ -1931,21 +2007,30 @@ body {
     flex-shrink: 0;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
     align-items: center;
     width: 560px;
 }
 
 .promo-item-image a {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 .promo-item-wrapper {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     align-items: stretch;
     /*width: 100%;*/
@@ -1964,7 +2049,10 @@ body {
     /*padding-left: 20px; новое*/
     padding-top: 78px;
     box-sizing: border-box;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-direction: column;
     justify-content: flex-start;
 
@@ -1983,7 +2071,10 @@ body {
 }
 
 .products-list {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     list-style: none;
     margin: 0;
@@ -2008,7 +2099,10 @@ body {
     width: 1160px;
     /*position: relative;
     z-index: 1;*/
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     margin: 0 auto;
     padding: 0;
@@ -2050,7 +2144,10 @@ height: 288px;
 }
 
 .manufacturers-list {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -2072,7 +2169,10 @@ height: 288px;
 
 .about-contracts-wrapper {
     width: 1160px;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     /*justify-content: space-between;*/
     margin: 0 auto;
     padding: 0;
@@ -2080,7 +2180,10 @@ height: 288px;
 }
 
 .footer-first-row {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -2092,13 +2195,17 @@ height: 288px;
 
 .main-footer-logo {
     display: inline-block;
+    vertical-align: top;
     width: 163px;
     height: 36px;
     flex-shrink: 0;
 }
 
 .footer-second-row {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     /*justify-content: space-between;
     align-items: baseline;
 
@@ -2109,14 +2216,20 @@ height: 288px;
 
 .navigation-site-list {
     list-style: none;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 
 .footer-third-row {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     align-items: flex-end;
     margin: 0 auto;
@@ -2126,7 +2239,10 @@ height: 288px;
 
 .socials ul {
     list-style: none;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -2155,7 +2271,10 @@ height: 288px;
     position: relative;
     list-style: none;
     z-index: 2;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
     margin: 0 auto;
     width: 100%;
@@ -2186,7 +2305,10 @@ height: 288px;
 
 .breadcrumbs-list {
     list-style: none;
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     padding: 0;
     margin: 0;
 }
@@ -2198,7 +2320,10 @@ height: 288px;
 }
 
 .sorting-form {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     flex-grow: 1;
     align-items: center;
@@ -2215,7 +2340,10 @@ height: 288px;
 }
 
 .catalog-wrapper {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     flex-direction: column;
     justify-content: flex-start;
     margin: 0;
@@ -2370,7 +2498,10 @@ height: 288px;
 }*/
 
 .contacts-phone {
-    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: flex-end;
     padding-right: 11px;
 }
