@@ -675,7 +675,7 @@ p.products-item__imgWrapper:hover {
 
 .services-description-item-image {
     position: absolute;
-    top: 30%;
+    top: 68px;
     right: 8%;
 
 }
@@ -2035,7 +2035,7 @@ body {
     align-items: stretch;
     /*width: 100%;*/
     width: 1160px; /*новое*/
-    height: 488px;
+    min-height: 488px;
     margin: 0 auto;
     padding: 0;
 }
@@ -2087,7 +2087,7 @@ body {
     margin-bottom: 95px;
     padding: 0;
     padding-bottom: 67px;
-    background: linear-gradient(to bottom, transparent 25.5%, #e5e5e5 25.5%, #e5e5e5 82.2%, #e5e5e5 82.2%);
+    background: linear-gradient(to bottom, transparent 102px, #e5e5e5 102px, #e5e5e5 82.2%, #e5e5e5 82.2%);
 }
 
 .services h2 {
@@ -2104,6 +2104,7 @@ body {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
+    align-items: flex-start;
     margin: 0 auto;
     padding: 0;
     /*margin-bottom: 162px;*/
