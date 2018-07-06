@@ -7,13 +7,8 @@
     var searchButton = searchForm.querySelector('.search__button');
     var searchLabel = searchForm.querySelector('.search__label');
     var services = document.querySelector('.services');
-    var gradientButtonDelivery = services.querySelector('.gradient-button__delivery');
-    var gradientButtonWarranty = services.querySelector('.gradient-button__warranty');
-    var gradientButtonCredit = services.querySelector('.gradient-button__credit');
-    var servicesDescriptionList = services.querySelector('.services-description-list');
-    var servicesDescriptionDelivery = servicesDescriptionList.querySelector('.services-description__delivery');
-    var servicesDescriptionWarranty = servicesDescriptionList.querySelector('.services-description__warranty');
-    var servicesDescriptionCredit = servicesDescriptionList.querySelector('.services-description__credit');
+    var servicesButtons = services.querySelectorAll('.services-button');
+    var servicesSliders = services.querySelectorAll('.services-description-item');
     var modalWriteUs = document.querySelector('.modal-write-us');
     var writeUsClose = modalWriteUs.querySelector('.modal-close');
     var writeUsOpen = document.querySelector('.write-us');
@@ -21,19 +16,12 @@
     var modalMap = document.querySelector('.modal-map');
     var mapClose = modalMap.querySelector('.modal-close');
     var promo = document.querySelector('.promo');
-    var promoSliderList = promo.querySelector('.promo-slider-list');
-    var firstSlideLink = promoSliderList.querySelector('.first-slide__link');
-    var secondSlideLink = promoSliderList.querySelector('.second-slide__link');
-    var thirdSlideLink = promoSliderList.querySelector('.third-slide__link');
-    var promoList = promo.querySelector('.promo-list');
-    var firstSlide = promoList.querySelector('.first-slide');
-    var secondSlide = promoList.querySelector('.second-slide');
-    var thirdSlide = promoList.querySelector('.third-slide');
+    var promoSliderButtons = promo.querySelectorAll('.promo-slider-item');
+    var promoSliders = promo.querySelectorAll('.promo-item');
     var writeUsForm = document.querySelector('.write-us-form');
     var writeUsName = writeUsForm.querySelector('#write-us-name');
     var writeUsEmail = writeUsForm.querySelector('#write-us-email');
     var writeUsText = writeUsForm.querySelector('.write-us-text');
-    var submit = writeUsForm.querySelector('.submit');
     var userName = '';
     var userEmail = '';
     var isStorageSupport = false;
@@ -50,48 +38,11 @@
 
     searchInput.addEventListener('input', onSearchInput);
 
-    var removeClassFromElements = function (parent, className) {
-        var elements = parent.querySelectorAll('.' + className);
+    var removeClassFromElements = function (elements, className) {
         Array.prototype.forEach.call(elements, function (item) {
             item.classList.remove(className);
         });
     };
-
-    var onGradientButtonDeliveryClick = function () {
-        removeClassFromElements(services, 'services-item_current');
-        gradientButtonDelivery.classList.add('services-item_current');
-        removeClassFromElements(servicesDescriptionList, 'services-description-item_current');
-        servicesDescriptionDelivery.classList.add('services-description-item_current');
-        servicesDescriptionDelivery.classList.remove(VISUALLY_HIDDEN);
-        servicesDescriptionWarranty.classList.add(VISUALLY_HIDDEN);
-        servicesDescriptionCredit.classList.add(VISUALLY_HIDDEN);
-    };
-
-    gradientButtonDelivery.addEventListener('click', onGradientButtonDeliveryClick);
-
-    var onGradientButtonWarrantyClick = function () {
-        removeClassFromElements(services, 'services-item_current');
-        gradientButtonWarranty.classList.add('services-item_current');
-        removeClassFromElements(servicesDescriptionList, 'services-description-item_current');
-        servicesDescriptionWarranty.classList.add('services-description-item_current');
-        servicesDescriptionWarranty.classList.remove(VISUALLY_HIDDEN);
-        servicesDescriptionDelivery.classList.add(VISUALLY_HIDDEN);
-        servicesDescriptionCredit.classList.add(VISUALLY_HIDDEN);
-    };
-
-    gradientButtonWarranty.addEventListener('click', onGradientButtonWarrantyClick);
-
-    var onGradientButtonCreditClick = function () {
-        removeClassFromElements(services, 'services-item_current');
-        gradientButtonCredit.classList.add('services-item_current');
-        removeClassFromElements(servicesDescriptionList, 'services-description-item_current');
-        servicesDescriptionCredit.classList.add('services-description-item_current');
-        servicesDescriptionCredit.classList.remove(VISUALLY_HIDDEN);
-        servicesDescriptionDelivery.classList.add(VISUALLY_HIDDEN);
-        servicesDescriptionWarranty.classList.add(VISUALLY_HIDDEN);
-    };
-
-    gradientButtonCredit.addEventListener('click', onGradientButtonCreditClick);
 
     var onWriteUsOpenClick = function (evt) {
         evt.preventDefault();
@@ -131,37 +82,42 @@
 
     mapClose.addEventListener('click', onMapCloseClick);
 
-    var onFirstSlideLinkClick = function () {
-        removeClassFromElements(promoSliderList, 'promo-slider-item_current');
-        firstSlideLink.classList.add('promo-slider-item_current');
-        firstSlide.classList.remove(VISUALLY_HIDDEN);
-        secondSlide.classList.add(VISUALLY_HIDDEN);
-        thirdSlide.classList.add(VISUALLY_HIDDEN);
+    var getCurrentIndex = function (buttons, className) {
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].classList.contains(className)) {
+                return i;
+            }
+        }
     };
 
-    firstSlideLink.addEventListener('click', onFirstSlideLinkClick);
-
-    var onSecondSlideLinkClick = function () {
-        removeClassFromElements(promoSliderList, 'promo-slider-item_current');
-        secondSlideLink.classList.add('promo-slider-item_current');
-        secondSlide.classList.remove(VISUALLY_HIDDEN);
-        firstSlide.classList.add(VISUALLY_HIDDEN);
-        thirdSlide.classList.add(VISUALLY_HIDDEN);
+    var toggleVisibility = function (buttons, className, sliders) {
+        var current = getCurrentIndex(buttons, className);
+        for (var i = 0; i < buttons.length; i++) {
+            if (i != current) {
+                buttons[i].classList.remove(className);
+                sliders[i].classList.add(VISUALLY_HIDDEN);
+            } else {
+                sliders[i].classList.remove(VISUALLY_HIDDEN);
+            }
+        }
     };
 
-    secondSlideLink.addEventListener('click', onSecondSlideLinkClick);
-
-    var onThirdSlideLinkClick = function () {
-        removeClassFromElements(promoSliderList, 'promo-slider-item_current');
-        thirdSlideLink.classList.add('promo-slider-item_current');
-        thirdSlide.classList.remove(VISUALLY_HIDDEN);
-        secondSlide.classList.add(VISUALLY_HIDDEN);
-        firstSlide.classList.add(VISUALLY_HIDDEN);
+    var bindSlidersListeners = function (buttons, className, sliders) {
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function () {
+                if (!this.classList.contains(className)) {
+                    removeClassFromElements(buttons, className);
+                    this.classList.add(className);
+                    toggleVisibility(buttons, className, sliders);
+                }
+            });
+        }
     };
-
-    thirdSlideLink.addEventListener('click', onThirdSlideLinkClick);
 
     var setup = function () {
+        bindSlidersListeners(promoSliderButtons, 'promo-slider-item_current', promoSliders);
+        bindSlidersListeners(servicesButtons, 'services-item_current', servicesSliders);
+
         searchInput.value = "";
         hideSearchButton();
 
@@ -170,8 +126,6 @@
             userName = localStorage.getItem('userName');
             userEmail = localStorage.getItem('userEmail');
         }
-
-
     };
 
     writeUsForm.addEventListener("submit", function (evt) {
