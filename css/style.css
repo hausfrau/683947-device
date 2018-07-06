@@ -1421,20 +1421,20 @@ label.max-price {
 }
 
 /*сортировка*/
-.sorting {
-    height: 70px;
+.sorting-form {
+    min-height: 70px;
     margin: 0;
     padding: 0;
-    /*background-color: #ebebeb;*/
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: flex-start;
     align-items: center;
+    box-sizing: border-box;
 }
 
-.sorting h2 {
+.sorting-form h2 {
     margin: auto 0;
     padding: 0;
     padding-left: 2px;
@@ -1450,8 +1450,11 @@ label.max-price {
 }
 
 .sorting-form-item {
+    margin: 0;
+    padding: 0;
+    margin-right: 21px;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: center;
 }
 
 .price-sort {
@@ -1462,16 +1465,18 @@ label.max-price {
 .type-sort {
     margin: 0;
     padding: 0;
-    margin-left: 21px;
+    /*margin-left: 21px;*/
 }
 
 .popularity-sort {
     margin: 0;
     padding: 0;
-    margin-left: 21px;
+    /*margin-left: 21px;*/
 }
 
 .sorting-form-button {
+    display: inline-block;
+    vertical-align: center;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0;
@@ -1495,6 +1500,8 @@ label.max-price {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .sorting-form-button-down {
@@ -1504,7 +1511,6 @@ label.max-price {
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     align-items: center;
     margin-left: 19px;
-    /*padding-right: 140px;*/
 }
 
 .sorting-form-item .sorting-form-button_current {
@@ -2316,26 +2322,13 @@ height: 288px;
 .filters__title h2 {
     margin: 0;
     padding: 0;
-    /*padding-left: 22px;*/
-}
-
-.sorting-form {
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    justify-content: space-between;
-    flex-grow: 1;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    padding-left: 54px;
 }
 
 .sorting-form-list {
+    width: 500px;
     margin: 0;
+    margin-left: 53px;
     padding: 0;
-    flex-basis: 100%;
     list-style: none;
 }
 
