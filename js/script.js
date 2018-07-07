@@ -27,8 +27,10 @@
     var isStorageSupport = false;
 
     var hideSearchButton = function () {
-        searchLabel.classList.remove('search__label_border');
-        searchButton.classList.add(VISUALLY_HIDDEN);
+        if (!searchInput.value) {
+            searchLabel.classList.remove('search__label_border');
+            searchButton.classList.add(VISUALLY_HIDDEN);
+        }
     };
 
     var onSearchInput = function () {
@@ -37,6 +39,13 @@
     };
 
     searchInput.addEventListener('input', onSearchInput);
+
+    searchInput.addEventListener('blur', hideSearchButton);
+
+    searchForm.addEventListener('submit', function () {
+       searchInput.value = '';
+       hideSearchButton();
+    });
 
     var removeClassFromElements = function (elements, className) {
         Array.prototype.forEach.call(elements, function (item) {
@@ -104,7 +113,7 @@
 
     var bindSlidersListeners = function (buttons, className, sliders) {
         for (var i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener("click", function () {
+            buttons[i].addEventListener('click', function () {
                 if (!this.classList.contains(className)) {
                     removeClassFromElements(buttons, className);
                     this.classList.add(className);
@@ -114,11 +123,11 @@
         }
     };
 
-    var setup = function () {
+    var setupDefault = function () {
         bindSlidersListeners(promoSliderButtons, 'promo-slider-item_current', promoSliders);
         bindSlidersListeners(servicesButtons, 'services-item_current', servicesSliders);
 
-        searchInput.value = "";
+        searchInput.value = '';
         hideSearchButton();
 
         if (typeof(Storage) !== 'undefined') {
@@ -128,10 +137,10 @@
         }
     };
 
-    writeUsForm.addEventListener("submit", function (evt) {
+    writeUsForm.addEventListener('submit', function (evt) {
         if (!writeUsName.value || !writeUsEmail.value || !writeUsText.value) {
             evt.preventDefault();
-            console.log("Нужно ввести имя и электронную почту");
+            console.log('Нужно ввести имя и электронную почту');
         } else {
             if (isStorageSupport) {
                 localStorage.setItem('userName', writeUsName.value);
@@ -140,5 +149,7 @@
         }
     });
 
-    setup();
+    window.onload = function () {
+        setupDefault();
+    };
 })();
