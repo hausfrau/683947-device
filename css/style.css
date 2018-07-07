@@ -131,6 +131,9 @@ input[type="radio"].visually-hidden {
     display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
     flex-wrap: nowrap;
 
+    justify-content: flex-end;
+    align-items: center;
+
     width: 100%;
     margin: 0;
     margin-bottom: 29px;
@@ -279,7 +282,6 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-right: 9px;
     margin-left: 20px;
-    margin-top: 20px;
     padding: 0;
 }
 
@@ -298,7 +300,6 @@ input[type="radio"].visually-hidden {
 .compare-image {
     margin-right: 6px;
     margin-left: 16px;
-    margin-top: 22px;
     padding: 0;
 }
 
@@ -311,8 +312,7 @@ input[type="radio"].visually-hidden {
 .cart-image {
     margin: 0;
     margin-left: 0;
-    margin-right: 7px;
-    margin-top: 20px;
+    margin-right: 6px;
     padding: 0;
 
     opacity: 1.0;
@@ -1142,23 +1142,30 @@ p.products-item__imgWrapper:hover {
     width: 1160px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 51px;
+    padding-top: 63px;
 }
 
-.main-footer-logo {
+.main-footer a {
+    margin: 0;
+    padding: 0;
+
+    color: inherit;
+}
+
+.main-footer-logo,
+a.main-footer-logo {
     display: inline-block;
     flex-shrink: 0;
     vertical-align: top;
 
     width: 163px;
     height: 36px;
+    margin-bottom: 20px;
 }
 
 .main-footer .navigation-user-list {
     justify-content: flex-end;
-    align-items: flex-end;
-
-    margin-bottom: 23px;
+    align-items: center;
 }
 
 .main-footer .login {
@@ -1185,6 +1192,7 @@ p.products-item__imgWrapper:hover {
 
     width: 1160px;
     margin: 0 auto;
+    margin-top: -7px;
 }
 
 
@@ -1214,8 +1222,8 @@ p.products-item__imgWrapper:hover {
 .main-footer .navigation-site-item {
     margin: 0;
     margin-top: 6px;
-    margin-right: 16px;
-    margin-left: 16px;
+    margin-right: 32px;
+    margin-left: 2px;
     padding: 0;
 }
 
@@ -1235,8 +1243,6 @@ p.products-item__imgWrapper:hover {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: flex-end;
-
-    padding-right: 11px;
 }
 
 .footer-third-row {
@@ -1517,6 +1523,7 @@ iframe {
 .quit {
     display: inline-block;
     vertical-align: bottom;
+    padding-left: 12px;
 
     font-size: 15px;
     line-height: 30px;
@@ -2456,13 +2463,6 @@ label.max-price {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.main-footer a {
-    margin: 0;
-    padding: 0;
-
-    color: inherit;
-}
-
 .inner-footer__user-name {
     margin-right: 12px;
 }
@@ -2477,7 +2477,6 @@ label.max-price {
     font-weight: 400;
     font-family: "open_sanslight", Arial, sans-serif;
     text-transform: none;
-    color: #000000;
 
     opacity: 0.3;
 }
