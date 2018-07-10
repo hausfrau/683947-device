@@ -1648,6 +1648,7 @@ breadcrumbs-item a,
     display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
     flex-grow: 1;
     flex-direction: column;
+    flex-basis: 62px;
 }
 
 .left-crossbar__top {
@@ -1682,11 +1683,11 @@ breadcrumbs-item a,
     justify-content: flex-start;
     align-items: flex-start;
 
-    width: 200px;
+    width: 201px;
     min-height: 1287px;
     margin: 0;
     padding: 0;
-    padding-right: 59px;
+    padding-right: 66px;
 
     background-color: #eeeeee;
 }
@@ -2011,7 +2012,7 @@ label.max-price {
     flex-direction: column;
     justify-content: flex-start;
 
-    width: 760px;
+    width: 834px;
     margin: 0;
     padding: 0;
 }
@@ -2035,7 +2036,7 @@ label.max-price {
 
 .sorting-form h2 {
     margin: auto 0;
-    margin-left: 70px;
+    margin-left: 73px;
     padding: 0;
     padding-left: 2px;
 
@@ -2148,7 +2149,7 @@ label.max-price {
 }
 
 .catalog {
-    margin-left: 70px;
+    margin-left: 73px;
 }
 
 /*карточки*/
