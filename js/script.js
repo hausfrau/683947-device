@@ -49,7 +49,7 @@ var loadMainPage = function () {
     var writeUsForm = document.querySelector('.write-us-form');
     var writeUsName = writeUsForm.querySelector('#write-us-name');
     var writeUsEmail = writeUsForm.querySelector('#write-us-email');
-    var writeUsText = writeUsForm.querySelector('.write-us-text');
+    var writeUsText = writeUsForm.querySelector('#write-us-text');
     var userName = '';
     var userEmail = '';
     var isStorageSupport = false;
@@ -63,6 +63,7 @@ var loadMainPage = function () {
     var onWriteUsOpenClick = function (evt) {
         evt.preventDefault();
         modalWriteUs.classList.remove(VISUALLY_HIDDEN);
+        modalWriteUs.classList.add('write-us-show');
 
         if (userName) {
             writeUsName.value = userName;
@@ -81,6 +82,8 @@ var loadMainPage = function () {
 
     var onWriteUsCloseClick = function () {
         modalWriteUs.classList.add(VISUALLY_HIDDEN);
+        modalWriteUs.classList.remove('write-us-show');
+        modalWriteUs.classList.remove('error');
     };
 
     writeUsClose.addEventListener('click', onWriteUsCloseClick);
@@ -88,12 +91,14 @@ var loadMainPage = function () {
     var onMapOpenClick = function (evt) {
         evt.preventDefault();
         modalMap.classList.remove(VISUALLY_HIDDEN);
+        modalMap.classList.add('map-show');
     };
 
     mapOpen.addEventListener('click', onMapOpenClick);
 
     var onMapCloseClick = function () {
         modalMap.classList.add(VISUALLY_HIDDEN);
+        modalMap.classList.remove('map-show');
     };
 
     mapClose.addEventListener('click', onMapCloseClick);
@@ -146,7 +151,10 @@ var loadMainPage = function () {
     writeUsForm.addEventListener('submit', function (evt) {
         if (!writeUsName.value || !writeUsEmail.value || !writeUsText.value) {
             evt.preventDefault();
-            console.log('Нужно ввести имя и электронную почту');
+
+            modalWriteUs.classList.remove("error");
+            modalWriteUs.offsetWidth = modalWriteUs.offsetWidth;
+            modalWriteUs.classList.add("error");
         } else {
             if (isStorageSupport) {
                 localStorage.setItem('userName', writeUsName.value);
